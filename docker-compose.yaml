@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  server1:
+    image: 'showrov016/nodeserver'
+    ports:
+      - "8001:3000"
+    environment:
+      - Message="Hello from server 1"
+    build: 
+      context: "dev"
+  server2:
+    image: 'showrov016/nodeserver'
+    environment:
+      - Message="Hello from server 2"
